@@ -1,6 +1,7 @@
 import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 import * as AWS from 'aws-sdk';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class UploadDocumentService {
   UploadDocumentS3(file, userEmail) {
     const S3 = new AWS.S3();
     const options = {partSize: 10 * 1024 * 1024, queueSize: 1};
-    return new Promise((resolve, reject) => {
+    return new Observable((observer) => {
       S3.upload({
         Key:  'Transcribe/'+ file['name'],
         Body: file,
@@ -22,8 +23,11 @@ export class UploadDocumentService {
         ContentType: file['type'],
         Tagging: `Email=${userEmail}`
       }, options, (err, res) => {
-        if(err) reject(err);
-        else resolve(res);
+        if(err) observer.error(err);
+        else {
+          observer.next(res);
+          observer.complete();
+        }
       })
     })
   }

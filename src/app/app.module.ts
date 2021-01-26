@@ -10,21 +10,32 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { UserLoginFactory } from './core/initializer/AmbientModeLoader';
 import { UserAuthService } from './services/user-auth.service';
 import { ConfirmationComponent } from './content/confirmation/confirmation.component';
+import { AuthComponent } from './content/auth/auth.component';
+import { AmplifyAngularModule, AmplifyService  } from 'aws-amplify-angular';
+import {AmplifyUIAngularModule} from "@aws-amplify/ui-angular";
+import { AuthGuardService } from './services/guards/auth-guard.service';
+import { FileUploadComponent } from './content/upload-document/file-upload/file-upload.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UploadDocumentComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+    AuthComponent,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+   // AmplifyAngularModule,
+    AmplifyUIAngularModule
   ],
   providers: [
+    AmplifyService,
+    AuthGuardService,
     { provide: APP_INITIALIZER, useFactory: UserLoginFactory, deps: [UserAuthService], multi: true },
   ],
   bootstrap: [AppComponent]

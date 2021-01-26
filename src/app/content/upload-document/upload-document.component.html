@@ -17,12 +17,13 @@
       <mat-step [stepControl]="userDataFormGroup.get('STEP_2')">
         <form [formGroup]="userDataFormGroup.get('STEP_2')">
           <ng-template matStepLabel>Upload your file</ng-template>
-          <div class="form-group">
-            <label for="exampleFormControlFile1">Example file input</label>
-            <input type="file" class="form-control-file"
-                  accept=".mp3,.mp4,.wav"
-                   id="exampleFormControlFile1" formControlName="fileCtrl" (change)="onFileChange($event)" required>
-          </div>
+            <div class="form-group">
+                <app-file-upload formControlName="fileCtrl"></app-file-upload>
+            </div>
+            <div class="invalid-feedback" style="display: block; font-size: 12px;">
+              <ng-container *ngIf="hasError('STEP_2.fileCtrl', 'fileSizeValidator')">Max File Size is 10 MB</ng-container>
+              <ng-container *ngIf="hasError('STEP_2.fileCtrl', 'requiredFileType')">Only MP3 & MP4 are supported</ng-container>
+            </div>
           <div>
             <button style="margin-right: 10px;" class="btn btn-secondary active ml-10" mat-button matStepperPrevious>Back</button>
             <button class="btn btn-secondary active" mat-button matStepperNext>Next</button>

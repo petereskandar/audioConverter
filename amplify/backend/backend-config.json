@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "audiotranscriptione36c104a": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

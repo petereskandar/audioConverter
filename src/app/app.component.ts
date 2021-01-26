@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { UserAuthService } from './services/user-auth.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'audio-transcription';
+
+  constructor(public userService: UserAuthService,
+              private router: Router) {}
+
+  signOut() {
+    this.userService.signOut().then(res => {
+      this.router.navigate(['/']);
+    })
+  }
 }
