@@ -299,27 +299,39 @@
 </style>
 
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img
-    width="40"
-    alt="Audio Logo"
-    src="assets/img/audio.png"
-  />
-  <span>Audio Converter</span>
-    <div class="spacer"></div>
-
-  <div *ngIf="userService.loggedUser" class="col-md-4">
-    <div class="float-right">Hello <strong>{{userService.loggedUser.attributes.email}}</strong>
-      <button class="btn" (click)="signOut()"><i class="material-icons">&#xE8AC;</i></button>
+<div class="container">
+  <div class="row">
+    <div class="toolbar col-md-12" role="banner">
+          <a href="#" [routerLink]="['/upload']"><img
+            width="40"
+            alt="Audio Logo"
+            src="assets/img/audio.png"
+          /></a>
+          <span>Audio Converter</span>
+            <div class="spacer"></div>
+        <div *ngIf="userService.loggedUser" class="col-md-4">
+          <div class="float-right">Hello <strong>{{userService.loggedUser.attributes.email}}</strong>
+            <button class="btn" (click)="signOut()"><i class="material-icons">&#xE8AC;</i></button>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm text-center">
+      <h1 style="margin-bottom: 40px; text-transform: capitalize;"> . </h1>
     </div>
   </div>
 </div>
 
-<div class="content" role="main">
+<div class="container" role="main">
   <div class="row">
-    <h1 style="margin-bottom: 20px; text-transform: capitalize;">Upload your Audio files and recieve an email with the content</h1>
+    <div class="col-sm text-center">
+      <h1 style="margin-bottom: 20px; text-transform: capitalize;">Upload your Audio files and recieve an email with the content</h1>
+    </div>
   </div>
-  <router-outlet></router-outlet>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
   <!-- Terminal
   <div class="terminal">
 
