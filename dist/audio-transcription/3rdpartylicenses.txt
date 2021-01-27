@@ -95,6 +95,9 @@ MIT
 @angular/router
 MIT
 
+@angular/service-worker
+MIT
+
 @aws-amplify/analytics
 Apache-2.0
                                  Apache License

@@ -15,6 +15,8 @@ import { AmplifyAngularModule, AmplifyService  } from 'aws-amplify-angular';
 import {AmplifyUIAngularModule} from "@aws-amplify/ui-angular";
 import { AuthGuardService } from './services/guards/auth-guard.service';
 import { FileUploadComponent } from './content/upload-document/file-upload/file-upload.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { FileUploadComponent } from './content/upload-document/file-upload/file-
     MaterialModule,
     ReactiveFormsModule,
    // AmplifyAngularModule,
-    AmplifyUIAngularModule
+    AmplifyUIAngularModule,
+   ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     AmplifyService,
