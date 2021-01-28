@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1611788477475,
+  "timestamp": 1611793750583,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -70,8 +70,8 @@
         "/common-es5.255a0bc0a276709f68e5.js",
         "/favicon.ico",
         "/index.html",
-        "/main-es2015.6b0b9a722ff0c19d031d.js",
-        "/main-es5.6b0b9a722ff0c19d031d.js",
+        "/main-es2015.c86292535ee186924337.js",
+        "/main-es5.c86292535ee186924337.js",
         "/manifest.webmanifest",
         "/polyfills-core-js-es2015.548e813681c8b6d9aaf3.js",
         "/polyfills-core-js-es5.548e813681c8b6d9aaf3.js",
@@ -101,6 +101,8 @@
         "/assets/icons/icon-72x72.png",
         "/assets/icons/icon-96x96.png",
         "/assets/img/audio.png",
+        "/assets/img/ios-add-btn.png",
+        "/assets/img/ios-menu-btn.png",
         "/assets/img/thankYou.png"
       ],
       "patterns": []
@@ -175,13 +177,15 @@
     "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/assets/img/audio.png": "65a9016ad1306a7beaf9f92f017079574de7a2d7",
+    "/assets/img/ios-add-btn.png": "b04f8aff472620d61612217ef4b2cd94f07b914b",
+    "/assets/img/ios-menu-btn.png": "85935a3142fbdca3ebd69db254792588e3c48b13",
     "/assets/img/thankYou.png": "cc7f0da95dadeb34ef3b8a64ad22662edc2a45fe",
     "/common-es2015.255a0bc0a276709f68e5.js": "7e0478dab2fee8a554eee50406e8e5bd67e287ed",
     "/common-es5.255a0bc0a276709f68e5.js": "2898ab3cc301cb8a5db927771268d5bccacaccd7",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/index.html": "f6e667b971438dc2ec54f7dadc8de7d4e6d55ace",
-    "/main-es2015.6b0b9a722ff0c19d031d.js": "14eec9ba380a7d99b16adf84c156470fcbb3b0e1",
-    "/main-es5.6b0b9a722ff0c19d031d.js": "6900aaa3df43757a1763c94aeecd21c24c9d57aa",
+    "/index.html": "504b36e86616e3cbc13843da504737eb0d364dcb",
+    "/main-es2015.c86292535ee186924337.js": "f4cee9707d5a96470f5f95a67e538a4cb4d12baa",
+    "/main-es5.c86292535ee186924337.js": "5b933add107092243ae6be59da3eda3b8708dc3b",
     "/manifest.webmanifest": "1f30c710a28c34ee96f1641a07b142c147bd3925",
     "/polyfills-core-js-es2015.548e813681c8b6d9aaf3.js": "c01adb99edf5e96a47c703304d63c1f46219a0a6",
     "/polyfills-core-js-es5.548e813681c8b6d9aaf3.js": "34afc03829011851279167588b0b99e17c0632ea",
